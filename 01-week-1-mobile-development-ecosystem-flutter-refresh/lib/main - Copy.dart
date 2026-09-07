@@ -29,7 +29,7 @@ class ProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 156, 197, 239),
+      backgroundColor: const Color(0xFFF8FAFC),
       appBar: AppBar(
         title: const Text(
           'Profil Mahasiswa',
@@ -98,7 +98,7 @@ class ProfileScreen extends StatelessWidget {
               ),
               const SizedBox(height: 24),
 
-// ── Kartu Info Akademik ──────────────────────────────
+              // ── Kartu Info Akademik ──────────────────────────────
               Card(
                 elevation: 2,
                 shape: RoundedRectangleBorder(
@@ -135,50 +135,19 @@ class ProfileScreen extends StatelessWidget {
                       ),
                       Divider(height: 24, color: Color(0xFF0D9488)),
                       _InfoRow(
-                        icon: Icons.link_rounded,
-                        label: 'Repositori GitHub',
+                        icon: Icons.code_rounded,
+                        label: 'pertemuan_pertama_ppb',
                         value: 'https://github.com/mochrizkiagung17-hue/pertemuan_pertama_ppb',
                       ),
                       Divider(height: 24, color: Color(0xFF0D9488)),
                       _InfoRow(
-                        icon: Icons.devices_rounded,
+                        icon: Icons.star_rounded,
                         label: 'Game Developer',
-                        value: 'Nothing Nothing',
+                        value: 'Nothing Nothing Nothing',
                       ),
                     ],
                   ),
                 ),
-              ),
-
-              const SizedBox(height: 20),
-
-              // ── Tantangan 3: Tombol Verifikasi Status ──────────────
-              ElevatedButton.icon(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xFF0D9488),
-                  foregroundColor: Colors.white,
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 20,
-                    vertical: 12,
-                  ),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                ),
-                onPressed: () {
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    const SnackBar(
-                      content: Text(
-                        'Status: Mahasiswa Aktif TRPL – Angkatan 2024',
-                      ),
-                      backgroundColor: Color(0xFF0284C7),
-                      behavior: SnackBarBehavior.floating,
-                      duration: Duration(seconds: 3),
-                    ),
-                  );
-                },
-                icon: const Icon(Icons.verified_user_rounded),
-                label: const Text('Verifikasi Status Mahasiswa'),
               ),
             ],
           ),
